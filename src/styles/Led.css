@@ -1,0 +1,154 @@
+.title link{
+   color: #111827;
+}
+.led-section {
+  background: #fff8dc;
+  padding: 48px 8%;
+}
+
+.led-inner{
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.led-section h2{
+  margin: 0 0 6px 0;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.led-sub{
+  color: #5a4b2a;
+  margin-bottom: 18px;
+  font-size: 0.95rem;
+}
+
+.led-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+}
+
+.led-card{
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  padding: 22px;
+  border-radius: 14px;
+  position: relative;
+  align-items: stretch;
+  box-shadow: 0 14px 36px rgba(15,23,42,0.09);
+  transition: transform 220ms ease, box-shadow 220ms ease;
+}
+
+
+.led-media{
+  position: relative;
+  height: 260px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+  border-radius: 14px;
+  background: linear-gradient(180deg,#fff,#fff8f0);
+}
+
+.led-media img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  border-radius:12px;
+  transition: transform 360ms cubic-bezier(.2,.9,.3,1);
+}
+
+.led-badge{
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background: #ffcd6b;
+  color: #8a4a00;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:800;
+  font-size:20px;
+  box-shadow: 0 16px 40px rgba(0,0,0,0.14);
+  transition: transform 260ms ease, box-shadow 260ms ease, background 260ms ease;
+}
+
+.led-price{ 
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: #fff4dc;
+  padding:8px 12px;
+  border-radius: 999px;
+  font-weight:800;
+  color:#8a4a00;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  transition: transform 260ms ease, box-shadow 260ms ease, background 260ms ease, color 260ms ease;
+}
+
+.led-body{ padding: 14px 0 0 0; }
+.led-body h3{ margin:0 0 6px 0; font-size:18px; font-weight:700; }
+.led-desc{ color:#6b7280; margin:0 0 12px 0; font-size:0.95rem; }
+
+.led-actions{ display:flex; align-items:center; justify-content:space-between; gap:12px; }
+
+.led-price{
+  background: linear-gradient(90deg,#fff3d8,#fff8e8);
+  padding:8px 14px;
+  border-radius: 999px;
+  font-weight:800;
+  color:#8a5800;
+  box-shadow: inset 0 -2px 0 rgba(0,0,0,0.02);
+}
+
+.led-add{ background:#8a5800; color:white; padding:8px 12px; border-radius:8px; border:none; cursor:pointer; font-weight:700; }
+
+.led-card{ will-change: transform, box-shadow; }
+.led-card:hover, .led-card:focus-within{ transform: translateY(-8px) scale(1.02); box-shadow: 0 28px 70px rgba(15,23,42,0.16); }
+.led-card:focus-within{ outline: 3px solid rgba(138,88,0,0.12); }
+.led-card:hover .led-media img, .led-card:focus-within .led-media img{ transform: scale(1.06); }
+.led-card:hover .led-badge, .led-card:focus-within .led-badge{ transform: translateY(-6px) scale(1.03); box-shadow: 0 22px 60px rgba(0,0,0,0.18); }
+.led-card:hover .led-price, .led-card:focus-within .led-price{ transform: translateY(-4px); box-shadow: 0 10px 28px rgba(0,0,0,0.12); background: linear-gradient(90deg,#fff9e6,#fff3d8); }
+.led-card:hover .led-add, .led-card:focus-within .led-add{ transform: translateY(-2px); box-shadow: 0 6px 18px rgba(0,0,0,0.12); }
+
+.led-add:focus{ outline: 3px solid rgba(255,205,107,0.22); }
+
+@media (max-width: 1000px){
+  .led-grid{ grid-template-columns: repeat(2,1fr); }
+}
+@media (max-width: 600px){
+  .led-grid{ grid-template-columns: 1fr; }
+  .led-media{ height: 300px; }
+}
+
+.led-card{
+  opacity: 0;
+  transform: translateY(18px) scale(0.995);
+  animation: ledFadeUp 420ms cubic-bezier(.2,.9,.3,1) forwards;
+}
+.led-card:nth-child(1){ animation-delay: 80ms; }
+.led-card:nth-child(2){ animation-delay: 160ms; }
+.led-card:nth-child(3){ animation-delay: 240ms; }
+.led-card:nth-child(4){ animation-delay: 320ms; }
+.led-card:nth-child(5){ animation-delay: 400ms; }
+.led-card:nth-child(6){ animation-delay: 480ms; }
+
+@keyframes ledFadeUp{ to { opacity: 1; transform: translateY(0) scale(1); } }
+
+@media (max-width: 520px){
+  .led-grid{ display: flex; gap: 14px; overflow-x: auto; padding-bottom: 8px; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; }
+  .led-grid::-webkit-scrollbar{ height: 8px; }
+  .led-grid::-webkit-scrollbar-thumb{ background: rgba(0,0,0,0.08); border-radius: 999px; }
+  .led-card{ min-width: 300px; flex: 0 0 auto; scroll-snap-align: start; }
+}
+
+.led-card:hover{ transform: translateY(-6px); box-shadow: 0 20px 50px rgba(15,23,42,0.12); }
+

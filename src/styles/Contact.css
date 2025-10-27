@@ -1,0 +1,48 @@
+.contact{
+    background-color:  FDE7A9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.contact h2{
+    margin-bottom: 0;
+}
+
+.contact p{
+    margin-bottom: 50px;
+}
+
+form{
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.form{
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    flex-direction: column;
+    text-align: left;
+    gap: 10px;
+    width: 100%;
+}
+
+.form input, textarea, select{
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+}
+
+.form textarea{
+    height: 90px;
+}
+
+.btn i{
+    margin-right: 10px;
+}
