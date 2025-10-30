@@ -5,3 +5,12 @@
     text-decoration: none;
     list-style: none;
 }
+
+/*-------- Media Query ------*/
+
+@media (max-width: 1378px) {
+    .header h1 {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+}

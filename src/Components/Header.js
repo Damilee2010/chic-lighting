@@ -142,7 +142,7 @@ function Header() {
       {/* Navigation Side Sheet */}
       <aside className={`side-sheet ${open ? 'open' : ''}`} role="dialog" aria-modal="true" aria-hidden={!open}>
         <nav className="sheet-nav">
-          <NavLink to="/" onClick={close} className={({isActive}) => isActive ? 'navlink active': 'navlink'}>Home</NavLink>
+          <NavLink to="/"  onClick={close} className={({isActive}) => isActive ? 'navlink active': 'navlink'}>Home</NavLink>
           <NavLink to="/products" onClick={close} className={({isActive}) => isActive ? 'navlink active': 'navlink'}>Products</NavLink>
           <NavLink to="/led" onClick={close} className={({isActive}) => isActive ? 'navlink active': 'navlink'}>LEDs</NavLink>
           <NavLink to="/gallery" onClick={close} className={({isActive}) => isActive ? 'navlink active': 'navlink'}>Gallery</NavLink>
